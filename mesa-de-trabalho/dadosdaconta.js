@@ -1,4 +1,5 @@
 function DadosDaConta (nome, sobrenome, numeroDaAgencia, numeroDaConta, saldoAtual){
+    
     this.nome = nome;
     this.sobrenome = sobrenome;
     this.numeroDaAgencia = numeroDaAgencia;
@@ -11,7 +12,8 @@ function DadosDaConta (nome, sobrenome, numeroDaAgencia, numeroDaConta, saldoAtu
         this.saldoAtual += valorDoDeposito;
         // Após a somatória apresentando o valor atualizado do Saldo Atual.
         return `Agora seu Saldo Atual é de R$ ${this.saldoAtual}.`;  
-    },
+    }
+
     this.sacar = function(valorDoSaque) {
         var temSaldoParaOSaque = this.saldoAtual >= valorDoSaque;
         // Valida se tem Saldo suficiente para o Saque.
@@ -28,4 +30,5 @@ function DadosDaConta (nome, sobrenome, numeroDaAgencia, numeroDaConta, saldoAtu
     }
 }
 
+// Exportou!
 module.exports = DadosDaConta;
