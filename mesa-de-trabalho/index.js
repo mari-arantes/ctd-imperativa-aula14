@@ -33,19 +33,23 @@
 
         var DadosDaConta = require ('./dadosdaconta');
 
-        console.log('Saldo Atual:', `R$ ${DadosDaConta.saldoAtual}`);
+        // Faltou criar a Instância
+        dadosDaConta = new DadosDaConta('Willian', 'Sant Anna', 2909, 43900, 0);
+
+        // Aqui em baixo você faz referência a instância
+        console.log('Saldo Atual:', `R$ ${dadosDaConta.saldoAtual}`);
         console.log('----------------');
-        console.log('Depósito:', DadosDaConta.depositar(1000));
+        console.log('Depósito:', dadosDaConta.depositar(1000));
         console.log('----------------');
-        console.log('Saque:', DadosDaConta.sacar(2000));
-        console.log('Saque:', DadosDaConta.sacar(1000));
+        console.log('Saque:', dadosDaConta.sacar(2000));
+        console.log('Saque:', dadosDaConta.sacar(1000));
 
         /*
             Atividade III: Converta os valores em texto JSON
             ( x ) Converta o resultado o objeto literal em JSON.
         */
 
-        var json = JSON.stringify(DadosDaConta);
-        console.log('----------------');
-        console.log('Valor convertido em JSON:', json);
+        //var json = JSON.stringify(DadosDaConta);
+        //console.log('----------------');
+        //console.log('Valor convertido em JSON:', json);
 
